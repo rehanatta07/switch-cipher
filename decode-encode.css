@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #231523, #17313a);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 480px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.07);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+textarea {
+  width: 100%;
+  min-height: 90px;
+  resize: vertical;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00aaff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #008fcc;
+}
+
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#toggleMode {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #000000aa;
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+/* Dark mode support */
+body.dark {
+  background: linear-gradient(to bottom right, #0e0e0e, #1a1a1a);
+  color: #fff;
+}
+
+body.dark .container {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark textarea {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f2f2f2;
+}
+
+body.dark button {
+  background-color: #444;
+}
+
+body.dark button:hover {
+  background-color: #333;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .container {
+    margin: 30px 16px;
+    padding: 20px;
+  }
+
+  textarea {
+    font-size: 0.95rem;
+    min-height: 70px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
